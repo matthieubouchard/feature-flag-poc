@@ -5,14 +5,15 @@ export enum ACCOUNT_TIER {
   PLATINUM = 'PLATINUM',
 }
 
-export enum ACCOUNT_PERMISSION {
+export enum USER_ROLE {
   ADMIN = 'ADMIN',
   USER = 'USER',
 }
 
 export type Account = {
+  id: string;
   tier: ACCOUNT_TIER;
   name: string;
   userEmail: string;
-  role: ACCOUNT_PERMISSION;
+  userRole: USER_ROLE;
 };

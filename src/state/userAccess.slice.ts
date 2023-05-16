@@ -1,7 +1,7 @@
 import { createSlice, createSelector, PayloadAction } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
 
-import { Account, ACCOUNT_TIER, ACCOUNT_PERMISSION } from '../types';
+import { Account, ACCOUNT_TIER, USER_ROLE } from '../types';
 import { mockAccounts } from './mockData';
 
 interface IAccountAccess {
