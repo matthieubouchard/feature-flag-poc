@@ -15,7 +15,6 @@ function App() {
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      console.log(e.currentTarget.value);
       dispatch(setSelectedAccount(e.currentTarget.value));
     },
     [dispatch],

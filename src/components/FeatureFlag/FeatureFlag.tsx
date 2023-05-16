@@ -11,15 +11,13 @@ interface Props {
 
 export const FeatureFlag: React.FC<Props> = ({ children, featureName, attributes = {} }) => {
   const currentAccount = useSelector(selectSelectedAccount());
-  console.log(currentAccount);
 
   return (
     <SplitTreatments
       names={[featureName]}
-      attributes={{ ...attributes, ACCOUNT_TIER: currentAccount.tier, USER_ROLE: currentAccount.role }}
+      attributes={{ ...attributes, ACCOUNT_TIER: currentAccount.tier, USER_ROLE: currentAccount.userRole }}
     >
       {({ treatments }) => {
-        console.log(treatments);
         const treatment = treatments[featureName]?.treatment;
 
         return treatment === 'on' ? children : null;

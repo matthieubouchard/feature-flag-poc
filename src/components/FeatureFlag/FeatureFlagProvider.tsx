@@ -17,7 +17,6 @@ interface Props {
 
 export const FeatureFlagProvider: React.FC<Props> = ({ children }) => {
   const userEmail = useSelector(selectUserEmail());
-  console.table({ userEmail });
   const factory = SplitSdk({
     core: {
       authorizationKey: 'rn412lhcvjb0v4vqg6gcjmb6g90lp6l11bom',
