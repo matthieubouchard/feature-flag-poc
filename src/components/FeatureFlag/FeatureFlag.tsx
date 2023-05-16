@@ -14,7 +14,10 @@ export const FeatureFlag: React.FC<Props> = ({ children, featureName, attributes
   console.log(currentAccount);
 
   return (
-    <SplitTreatments names={[featureName]} attributes={{ ...attributes, ACCOUNT_TIER: currentAccount.tier }}>
+    <SplitTreatments
+      names={[featureName]}
+      attributes={{ ...attributes, ACCOUNT_TIER: currentAccount.tier, USER_ROLE: currentAccount.role }}
+    >
       {({ treatments }) => {
         console.log(treatments);
         const treatment = treatments[featureName]?.treatment;
