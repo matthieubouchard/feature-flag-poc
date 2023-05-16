@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is POC for some work that I recently did for feature flagging. 
+This is POC for an implmentation I recently did for feature flagging. 
 
 ### Requirements: 
   - The application allows a single user to be part of many accounts
